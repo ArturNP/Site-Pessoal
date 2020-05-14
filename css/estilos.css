@@ -16,7 +16,7 @@ body {
 
   .bg-image {
     /*background:#dd77ff;*/
-    background-image: url('https://www.designerd.com.br/wp-content/uploads/2018/07/download.png');
+    background-image: url('../Imagens/Body_Background.png');
     background-size: auto 100vh;
     /* Center and scale the image nicely */
     background-position: center;
