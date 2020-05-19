@@ -7,12 +7,14 @@
 
 body {
   background-image: url('../img/Body_Background.png');
-  background-size: auto 100vw;
+  background-size: 100vw 800px;
   background-position: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; 
   font-family: Arial;
   font-size: 12px;
+  background-color: #871494;
+
 }
 
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
@@ -34,7 +36,6 @@ body {
   body {
     font-size: 18px;
     background-image: none;
-    background-color: #871494;
     
   }
 }
@@ -100,7 +101,6 @@ a:hover {
  }
 
 .portfolio h2 {
-  margin-bottom: 2em;
   padding: 2em;
   width: 100vw;
   position: relative;
@@ -120,22 +120,20 @@ a:hover {
  }*/
  
  .portfolio .grid {
+   padding-top: 2em;
    display: grid;
-   justify-content: center;
+   justify-content: space-around;
    gap: 1em;
+   background-color: #871494;
  }
 
- @media (min-width: 500px) {
+ @media (min-width: 550px) {
   .portfolio .grid {
-    display: grid;
-    gap: 2em;
-    grid-template-columns: 240px 240px;
+    grid-template-columns: 260px 260px;
   }
 }
 
- @media (min-width: 1040px) {
+@media (min-width: 1040px) {
   .portfolio .grid {
-    display: flex;
-    justify-content: space-around;
-  }
+    grid-template-columns: repeat(3, 260px);
 }
