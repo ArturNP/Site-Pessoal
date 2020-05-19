@@ -157,7 +157,7 @@ a:hover {
 .footer {
   padding: 1em;
   width: 100vw;
-  position: relative;
+  position: static bottom;
   font-family: 'Press Start 2P', cursive;
   font-size: 1em;
   line-height: 1.8em;
