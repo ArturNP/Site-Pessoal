@@ -1,4 +1,4 @@
-/* Aula inicial :D */
+/* soft reset do css */
 * {
   margin: 0;
   padding: 0;
@@ -6,96 +6,136 @@
 }
 
 body {
-        
-    font-family: "Courier New", Courier, monospace;
-      
-  }
-  
-  a {
-    color: DARKVIOLET /*teal*/;
-    text-decoration: none;  
-  }
-  
-  a:hover {
-    text-decoration: underline;
-    transform: scale(1.2);
-    transition: transform 0.3s;
-  }
-
-  .bg-image {
-    /*background:#dd77ff;*/
-    background-image: url('../Imagens/Body_Background.png');
-    background-size: auto 100vh;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter:blur(8px);
-    -webkit-filter:blur(8px);
-    /* Full height */
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;       
-    transition: -webkit-filter 0.7s, filter 0.7s;
-  }
-
-  .bg-text:hover {    
-    box-shadow: 5px 5px 5px #333;
-    transition: box-shadow 0.7s,
-  }
-
-  
-  .bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  margin: 20px;
-  font-size: 100%;
-  text-align: center;
-  transition: background-color 1.4s, font-weight 0.7s, border 0.7s, marging 0.7s, padding 0.7s;
+  background-image: url('../img/Body_Background.png');
+  background-size: auto 100vh;
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  font-family: Arial;
+  font-size: 12px;
 }
 
-  
-  .menu ul {
-   display: flex;
-   justify-content: space-around;
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 12px;
   }
-  
-  .menu li{
-   list-style: none;
-  }
-  
-  #menu_principal {
-    background-color: white;
-  }
-  
-  .site-subtitle,
-  .site-title {
-    color: whitesmoke;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    transition: margin 0.7s, padding 0.7s;
-  }
+}
 
-  .site-subtitle:hover,
-  .site-title:hover {
-    transform: scale(1.2);
-    transition: transform 0.7s;
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 14px;
   }
-  
-  .site-subtitle {
-    font-style: italic;
+}
+
+/* breakpoint */
+@media (min-width: 900px) {
+  body {
+    font-size: 18px;
+    background-image: none;
+    background-color: #871494;
+    
   }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 3;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+ list-style: none; 
+}
+
+.menu a {
   
-  
+  display: block;
+  padding: 10px 20px;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-subtitle, 
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 2em;
+}
+
+.site-subtitle {
+ font-family: 'Press Start 2P', cursive;
+ font-size: 1em;
+ line-height: 1.8em;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+ }
+
+.portfolio h2 {
+  margin-bottom: 2em;
+  padding: 2em;
+  width: 100vw;
+  position: relative;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1em;
+  line-height: 1.8em;
+  background-color: whitesmoke;
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+/*.img-portfolio,
+ figcaption {
+   padding-left: 2em;
+ }*/
+ 
+ .portfolio .grid {
+   display: grid;
+   justify-content: center;
+   gap: 1em;
+ }
+
+ @media (min-width: 500px) {
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 240px 240px;
+  }
+}
+
+ @media (min-width: 1040px) {
+  .portfolio .grid {
+    display: flex;
+    justify-content: space-around;
+  }
+}
