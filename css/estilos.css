@@ -190,7 +190,7 @@ a:hover {
     .icons {
         display: grid;
         grid-template-columns: 1fr 60% repeat(8, 1fr);
-        column-gap: 0.5em;
+        column-gap: 1em;
         text-align: center;
     }
 }
