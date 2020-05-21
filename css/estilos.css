@@ -170,7 +170,8 @@ a:hover {
 
 .icons {
     display: grid;
-    grid-template-columns: 1fr 60% repeat(8, 1fr);
+    grid-template-columns: 1fr 10em repeat(8, 1fr);
+    column-gap: 0.5em;
     text-align: center;
 }
 
@@ -183,4 +184,13 @@ a:hover {
     font-size: 1em;
     text-align: start;
     grid-column-start: 2;
+}
+
+@media (min-width: 500px) {
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 60% repeat(8, 1fr);
+        column-gap: 0.5em;
+        text-align: center;
+    }
 }
