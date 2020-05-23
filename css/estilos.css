@@ -124,24 +124,29 @@ a:hover {
 
 .img-portfolio {
     height: 180px;
-    width: 240px;
+    width: 180px;
     object-fit: cover;
-    object-position: left bottom;
+    object-position: top;
     border-radius: 0.5em;
+    transition: linear object-position 30s;
+    ;
+}
+
+.img-portfolio:hover {
+    object-position: bottom;
 }
 
 figure {
+    margin: 1em;
     background-color: rgba(10, 10, 10, 0.4);
     border-radius: 0.5em;
     width: 240px;
-}
-
-.grid figure {
     transition: transform 0.3s;
-    border-radius: 0.5em;
+    text-align: center;
 }
 
-.grid figure img:hover {
+figure:active,
+figure:hover {
     transform: scale(1.2);
 }
 
@@ -153,10 +158,6 @@ figure {
     font-size: 1em;
     line-height: 1.8em;
     background-color: whitesmoke;
-}
-
-.portfolio figure {
-    text-align: center;
 }
 
 
